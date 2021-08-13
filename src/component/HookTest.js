@@ -27,7 +27,11 @@ const CountContext = createContext();
 
 function Counter() {
   const count1 = useContext(CountContext); //一句话就可以得到count
-  return <h2>{count1}</h2>;
+  return (
+    <h2>
+      {count1}
+    </h2>
+  );
 }
 
 function HookTest() {
@@ -91,4 +95,28 @@ function HookTest() {
   );
 }
 
-export default HookTest;
+const Child = ({ data }) => {
+  console.log('child render...', data); // 每次更新都会执行
+  const [name, setName] = useState(data); // 只会在首次渲染组件时执行
+  return (
+    <div>
+      <div>child</div>
+      <div>
+        {name} --- {data}
+      </div>
+    </div>
+  );
+};
+
+const Hook = () => {
+  console.log('Hook render...');
+  const [name, setName] = useState('rose');
+  return (
+    <div>
+      <button onClick={() => setName('jack')}>update name </button>
+      <Child data={name} />
+    </div>
+  );
+};
+
+export default Hook;
