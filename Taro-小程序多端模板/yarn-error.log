@@ -1,0 +1,93 @@
+Arguments: 
+  D:\node\node.exe C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @tarojs/mini-runner --silent --no-progress
+
+PATH: 
+  D:\node\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\zhong\Desktop\test\myapp\node_modules\.bin;D:\node\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\zhong\Desktop\test\myapp\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\app\svn\bin;D:\app\git\Git\cmd;C:\Program Files\dotnet\;C:\Users\zhong\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\JDK\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\node\;C:\Users\zhong\AppData\Local\Microsoft\WindowsApps;C:\Users\zhong\AppData\Local\BypassRuntm;C:\Users\zhong\AppData\Local\Microsoft\WindowsApps;C:\Users\zhong\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\zhong\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\zhong\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.15.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/@babel%2fruntime: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.1.36:1081
+      at ClientRequest.onError (C:\Users\zhong\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:152234:17)
+      at Object.onceWrapper (events.js:422:26)
+      at ClientRequest.emit (events.js:315:20)
+      at Socket.socketErrorListener (_http_client.js:469:9)
+      at Socket.emit (events.js:315:20)
+      at emitErrorNT (internal/streams/destroy.js:106:8)
+      at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "myapp",
+    "version": "1.0.0",
+    "private": true,
+    "description": "mini-program",
+    "templateInfo": {
+      "name": "default",
+      "typescript": true,
+      "css": "sass"
+    },
+    "scripts": {
+      "build:weapp": "taro build --type weapp",
+      "build:swan": "taro build --type swan",
+      "build:alipay": "taro build --type alipay",
+      "build:tt": "taro build --type tt",
+      "build:h5": "taro build --type h5",
+      "build:rn": "taro build --type rn",
+      "build:qq": "taro build --type qq",
+      "build:jd": "taro build --type jd",
+      "build:quickapp": "taro build --type quickapp",
+      "dev:weapp": "npm run build:weapp -- --watch",
+      "dev:swan": "npm run build:swan -- --watch",
+      "dev:alipay": "npm run build:alipay -- --watch",
+      "dev:tt": "npm run build:tt -- --watch",
+      "dev:h5": "npm run build:h5 -- --watch",
+      "dev:rn": "npm run build:rn -- --watch",
+      "dev:qq": "npm run build:qq -- --watch",
+      "dev:jd": "npm run build:jd -- --watch",
+      "dev:quickapp": "npm run build:quickapp -- --watch"
+    },
+    "browserslist": [
+      "last 3 versions",
+      "Android >= 4.1",
+      "ios >= 8"
+    ],
+    "author": "",
+    "dependencies": {
+      "@babel/runtime": "^7.7.7",
+      "@tarojs/components": "3.0.23",
+      "@tarojs/runtime": "3.0.23",
+      "@tarojs/taro": "3.0.23",
+      "vue-template-compiler": "^2.5.0",
+      "vue": "^2.5.0"
+    },
+    "devDependencies": {
+      "@types/webpack-env": "^1.13.6",
+      "@tarojs/mini-runner": "3.0.23",
+      "@babel/core": "^7.8.0",
+      "@tarojs/webpack-runner": "3.0.23",
+      "babel-preset-taro": "3.0.23",
+      "vue-loader": "^15.9.2",
+      "eslint-plugin-vue": "^6.x",
+      "eslint-config-taro": "3.0.23",
+      "eslint": "^6.8.0",
+      "stylelint": "9.3.0",
+      "@typescript-eslint/parser": "^2.x",
+      "@typescript-eslint/eslint-plugin": "^2.x",
+      "typescript": "^3.7.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
